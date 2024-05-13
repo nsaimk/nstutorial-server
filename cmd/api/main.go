@@ -24,6 +24,8 @@ func main() {
 
 	log.Println("Starting the app on port 8080")
 
+	http.HandleFunc("/", Hello)
+
 	// start a web server
 	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 	if err != nil {
