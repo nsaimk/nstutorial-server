@@ -1,11 +1,10 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "api/main.go",
-            "use": "@vercel/go"
+    "builds": {
+        "env": {
+            "GO_BUILD_FLAGS": "-ldflags '-s -w'"
         }
-    ],
+    },
     "rewrites": [
         {
             "source": "^/",
