@@ -16,7 +16,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "cmd/api/main.Handler"
+            "dest": "cmd/api/main"
         }
     ]
 }
