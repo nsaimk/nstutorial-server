@@ -2,21 +2,18 @@
     "version": 2,
     "builds": [
         {
-            "src": "cmd/api/main.go",
-            "use": "@vercel/go",
-            "config": {
-                "maxLambdaSize": "50mb"
-            }
+            "src": "api/main.go",
+            "use": "@vercel/go"
         }
     ],
     "routes": [
         {
-            "src": "/hello",
-            "dest": "cmd/api/handlers.Hello"
+            "src": "/api/(.*)",
+            "dest": "api/main.go"
         },
         {
             "src": "/(.*)",
-            "dest": "cmd/api/main"
+            "dest": "index.html"
         }
     ]
 }
