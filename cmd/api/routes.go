@@ -18,5 +18,7 @@ func (app *application) routes() http.Handler{
 	// get request, goes to the Home handler
 	mux.Get("/", app.Home)
 
+	mux.Get("/lessons", app.AllLessons)
+
 	return mux
 }
