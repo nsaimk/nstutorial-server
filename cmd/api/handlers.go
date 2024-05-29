@@ -41,7 +41,7 @@ func (app *application) AllLessons(w http.ResponseWriter, r *http.Request) {
 		Level:  "Beginner",
 		Lesson: 1,
 		Content: models.Content{
-			Title:        "Variables",
+			Title:        "Variables from BE",
 			Introduction: "Variables are used to store data values in programming.",
 			Examples:     "var name = 'John':",
 		},

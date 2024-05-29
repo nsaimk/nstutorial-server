@@ -14,6 +14,7 @@ func (app *application) routes() http.Handler{
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)
+	mux.Use(app.enableCORS)
 
 	// get request, goes to the Home handler
 	mux.Get("/", app.Home)
